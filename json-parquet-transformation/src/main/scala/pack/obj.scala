@@ -21,6 +21,7 @@ object obj {
     val spark = SparkSession.builder().getOrCreate()
     import spark.implicits._
 
+    // url(json format) data read
     val html = Source.fromURL("https://randomuser.me/api/0.8/?results=100")
     val urldata = html.mkString
     println(urldata)
